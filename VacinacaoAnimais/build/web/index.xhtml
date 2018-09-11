@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>          
+<style>
+            #principal{
+                position:absolute;
+                left:45%;
+                top:30%;
+                margin-left:-830px;
+                margin-top:-245px;
+                width: 454px;
+                height: 300px;
+                border: 2px solid #6495ED;
+                padding: 10px;
+                text-align: left;
+                font-family: calibri;
+                font-size: 25px;
+                border-radius: 50px;
+                text-align: center;
+            }
+               #msg1 
+            {
+                float: right;
+                padding-right: 115px;
+                font-family: Cambria;
+                font-size: 40px;
+                color: #6495ED;
+                text-align: top;
+            }
+        </style>
+        <title>Vacinação</title>
+    </h:head>
+    <h:body style="background-image: url(https://png.pngtree.com/element_origin_min_pic/16/10/05/1557f4a7d49dde9.jpg); background-size: 100%; background-repeat: no-repeat;"> 
+        <p/>
+        <p:outputPanel >
+            <h:form id="formLogin">
+                        
+                <div id="principal">
+               <div id="msg1">
+             Seja Bem-Vindo!
+            </div><br/>
+            <br></br>
+            <br></br>
+                <h:outputLabel value="Usuário: "/>
+                <p:inputText id="campoLogin" size="14" value="#{indexControle.adm.login}" 
+                             maxlength="15" required="true" requiredMessage="Nome obrigat�rio" >
+                </p:inputText> 
+                <p/>
+                <h:outputLabel value="Senha: "/>
+                <p:password  feedback="false" size="10"  maxlength="10"
+                             value="#{indexControle.adm.senha}"
+                             required="true" requiredMessage="Senha obrigat�ria" />  
+                <p/>
+                <p:commandButton value="OK" icon="ui-icon-check" ajax="false"
+                                 action="#{indexControle.autenticar()}" styleClass="ui-state-hover"/> 
+                <p/>
+                <p:messages showIcon="false" closable="true" />
+                </div>
+            </h:form>
+        </p:outputPanel>
+    </h:body>
+</html>

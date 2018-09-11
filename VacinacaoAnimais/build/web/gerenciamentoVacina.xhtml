@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+ <ui:composition template="template.xhtml">    
+        <ui:define name="body">
+            <h:form>
+                <p:outputPanel style="width: 100%; text-align: right" >
+                    <h:commandLink value="sair" action="index" />
+                    <br/>
+                    <p:separator/>
+                </p:outputPanel>
+                
+                <li><h:link outcome="/cadVacina" value="Cadastro de Vacinas"/></li>
+                <li><h:link outcome="/listarVacina" value="Exibição de Vacinas"/></li>
+                <li><h:link outcome="/excluirVacina" value="Exclusão de Vacinas"/></li>
+                <li><h:link outcome="/alterarVacina" value="Editar as Vacinas"/></li>
+                
+                <b/>
+                <li><h:link outcome="/menu" value="Voltar"/></li>
+            </h:form>
+        </ui:define>
+</ui:composition>    
+</html>

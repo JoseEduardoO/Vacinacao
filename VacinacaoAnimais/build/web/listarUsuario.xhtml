@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                
+                <title>Exibir os Usuários</title>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+           <p:outputPanel >
+            
+           <h:form>
+                   <p:dataTable id="tabelaUsuarios" emptyMessage="Nenhum usuário cadastrado" 
+                             resizableColumns="true" tableStyle="width:auto"
+                             var="user" value="#{usuarioGerenciar.usuarios}">
+                    <p:column headerText="Id:"  style="text-align: right">
+                        <h:outputText value="#{user.id}"/>
+                    </p:column>
+                    <p:column headerText="Nome:">
+                        <h:outputText value="#{user.nome}"/>
+                    </p:column>
+                    <p:column headerText="Email: ">
+                        <h:outputText value="#{user.email}"/>
+                    </p:column  >
+                    
+                </p:dataTable>
+                            
+                 
+                            
+                          
+                 </h:form>
+               <h:link outcome="/gerenciamentoUsuarios" value="Voltar" />
+               </p:outputPanel> 
+                
+           
+        </h:body>
+    </f:view>
+</html>
